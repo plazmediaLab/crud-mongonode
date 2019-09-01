@@ -1,0 +1,766 @@
+/* =========================================================== */
+/*  ------------------------------------------------------------
+    PLAZreset-CSS
+    Plazmediå® 2019 · Plazmediå LAB™ 
+    http://www.plazmedia.com.mx/home
+    v4.0.1| 19220919
+    License: Copyright © · All rights reserved
+*/
+/* =========================================================== */
+
+/* Plazmedia color variable */
+:root{
+    /* ---------- Colores Primarios ----------- */
+        --plaz-color:               #4918FA;
+        --secondary:                #181B32;
+        --secondary-alt:            #0F1125;
+        --complementary:            #03CAD2;
+    
+    /* ------------- Degradado ---------------- */
+        --plaz-gradient1:           #310DFF;
+        --plaz-gradient2:           #9107fa;
+    
+    /* ----------- Monocromático -------------- */
+        --Black:                    #000000;
+        --white:                    #ffffff;
+    
+    /* ------------- Botones ---------------- */
+    /* Boton Relacionar */
+        --relacionar:               #4918FA;
+        --relacionar-hover:         #5F33FF;
+        --relacionar-active:        #2C09AD;
+    /* Boton Primary */
+        --primary:                  #0061ff;
+        --primary-hover:            #008cff;
+        --primary-active:           #005aeb;
+    /* Confirmar */
+        --green:                    #3EA538;
+        --green-hover:              #64BA5D;
+        --green-active:             #348C30;
+    /* Cancelar */
+        --orange:                   #FF412C;
+        --orange-hover:             #FF5E52;
+        --orange-active:            #B3200F;
+    /* Info */
+        --info:                     #F2B600;
+        --info-hover:               #ffc926;
+        --info-active:              #f2a200;
+    /* Gray */
+        --gray:                     #e8e8f1;
+        --gray-hover:               #d8d8e7;
+        --gray-active:              #c8c8de;
+
+    /* -----------Escala de grises ----------- */
+        --gray-10:                  #1A1A1A;
+        --gray-15:                  #262626;
+        --gray-25:                  #3f3f3f;
+        --gray-50:                  #7f7f7f;
+        --gray-60:                  #999999;
+        --gray-75:                  #bfbfbf;
+        --gray-85:                  #d8d8d8;
+        --gray-90:                  #E6E6E6;
+        --gray-95:                  #F1F1F1;
+
+    /* ------ Disabled ----- */
+        --disabled-color:           #e6e6e6;
+        --disabled-color-d:         #9eabb1;
+
+
+        --screen-cut-s:              480px;
+        --screen-cut-m:              570px;
+        --screen-cut-l:              768px;
+        --screen-cut-xl:             1100px;
+
+
+        --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+/*============================================================*/
+
+/* Main control of the HTML tag */
+html{
+    /** 1rem = 10px - Reset para REMS - 62.5% = 10px de 16px que es el estandar de tamaño para la funete de los navegadores. **/
+    font-size: 62.5%; 
+
+    font-family: var(--font);
+    
+    line-height:1.6;
+    -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+/* Margen, relleno y scroll en x. */
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 1.5rem;
+}
+/* Margin en etiquetas p */
+p{
+    margin: .5rem 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.6rem;
+}
+/* Margin en etiquetas H */
+h1, h2, h3, h4, h5, h6{
+    margin: 1rem 0;
+    line-height: 1;
+}
+/* Tamaños de etiquetas H */
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.75rem;
+}
+h5{
+    font-size: 1.5rem;
+}
+h6{
+    font-size: 1.25rem;
+}
+
+/* Diseño de enlaces */
+a{
+    color:var(--plaz-color);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* Control de texto Small */
+small {
+    font-size: 80%;
+    font-weight: 400;
+}
+abbr[title], abbr{
+    cursor: help;
+}
+/* Controles alternativos */
+hr{
+    height: .1rem;
+    overflow: hidden;
+    background-color: var(--gray-85);
+    margin: 2rem auto;
+}
+ol, ul, dl{
+    margin: 1rem;
+}
+dt{
+    font-weight: bold;
+}
+dt, dd{
+    font-style: oblique;
+};
+button,
+input,
+select,
+textarea {
+    font-family: inherit; 
+    font-size: 100%; 
+    margin: 0;
+}
+button:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.3rem rgba(0, 0, 0, 0.2);
+}
+/* Imagen adaptada a su contenedor */
+img{
+    max-width: 100%;
+    border-style: none;
+}
+/* Before y after (s)*/
+*,::before,::after{
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+    
+/* -------------------- ^ PLAZreset-CSS ^ -------------------- */
+/* =========================================================== */
+
+
+/* =========================================================== */
+/*  ------------------------------------------------------------
+    CSS-Plaz
+    Plazmediå® 2019 · Plazmediå LAB™ 
+    http://www.plazmedia.com.mx/home
+    v4.0 | 19220919
+    License: Copyright © · All rights reserved
+*/
+/* =========================================================== */
+
+/* ------ Contenedor Principal ----- */
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 480px){
+    .container{
+        width: 95%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .container{
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 990px){
+    .container{
+        max-width: 100rem;
+    }
+}
+/* ------ Clases Contenedores ----- */
+.card{
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid var(--gray-active);
+    border-radius: 0.7rem;
+}
+.card-shadow{
+    background-color: transparent;
+    /* padding: 3rem; */
+    margin: 2rem auto;
+    border: .1rem solid var(--gray-active);
+    -webkit-box-shadow: 0px 12px 20px -15px rgba(0,0,0,0.3);
+            box-shadow: 0px 12px 20px -15px rgba(0,0,0,0.3);
+    border-radius: .7rem;
+}
+.card-header-b{
+    padding: 3rem;
+    margin: 0;
+    border-bottom: .1rem solid var(--gray);
+    background-color: #f4f4f8;
+    top: 0;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+.card-header{
+    padding: 3rem;
+    margin: 0;
+    border-bottom: .1rem solid var(--gray-hover);
+    top: 0;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+.card-body{
+    padding: 3rem;
+    margin: 0;
+}
+.card-footer{
+    padding: 1rem 4rem;
+    margin: 0;
+    border-top: .1rem solid var(--gray-hover);
+    top: 0;
+    border-radius: 0 0 0.7rem 0.7rem;
+    text-align: center;
+    color: var(--gray-50);
+}
+.card-footer-b{
+    padding: 1rem 4rem;
+    margin: 0;
+    border-top: .1rem solid var(--gray-hover);
+    background-color: #f4f4f8;
+    top: 0;
+    border-radius: 0 0 0.7rem 0.7rem;
+    text-align: center;
+    color: var(--gray-50);
+}
+.card-body hr{
+    border: .1rem solid var(--gray-85);
+}
+/* ------ Displays ----- */
+.display-f{
+    display: flex !important;
+}
+.justify-c-bet{
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.align-i-c{
+    -ms-flex-align: center!important;
+    align-items: center!important; 
+}
+/* ------ Solucionar Fix de los Floats ----- */
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+
+/* ------ utilidades ----- */
+.test{
+    background-color: rgba(73, 24, 250, .5)
+}
+.uper{
+    text-transform: uppercase;
+}
+.txt-c{
+    text-align: center;
+}
+.txt-l{
+    text-align: left;
+}
+.txt-r{
+    text-align: right;
+}
+.m-s{
+    margin: 1.6rem auto;
+}
+.m-m{
+    margin: 2.5rem auto;
+}
+.m-l{
+    margin: 5rem auto;
+}
+.vm-s{
+    margin: 1.6rem auto;
+}
+.vm-m{
+    margin: 2.5rem auto;
+}
+.vm-l{
+    margin: 5rem auto;
+}
+.in-l-b{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+/* ------ Text Tags ----- */
+.txt-tag{
+    padding: .3rem .7rem;
+    border-radius: .3rem;
+    background-color: var(--gray);
+    color: var(--gray-25);
+    font-weight: bold;
+}
+.txt-tag-in{
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: .3rem;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 85%;
+    background-color: var(--gray);
+    color: var(--gray-25);
+}
+.txt-tag-r{
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 85%;
+    background-color: var(--gray);
+    color: var(--gray-25);
+}
+a.txt-tag,
+a.txt-tag-in,
+a.txt-tag-r{
+    cursor: pointer;
+    text-decoration: none;
+} 
+a.txt-tag:hover,
+a.txt-tag-in:hover,
+a.txt-tag-r:hover{
+    background-color: var(--gray-hover);
+} 
+.tag-plaz{
+    background-color: var(--plaz-color);
+    color: var(--white);
+}
+a.tag-plaz:hover{
+    background-color: var(--relacionar-hover);
+}
+.tag-primary{
+    background-color: var(--primary);
+    color: var(--white);
+}
+a.tag-primary:hover{
+    background-color: var(--primary-hover);
+}
+.tag-ok{
+    background-color: var(--green);
+    color: var(--white);
+}
+a.tag-ok:hover{
+    background-color: var(--green-hover);
+}
+.tag-cancel{
+    background-color: var(--orange);
+    color: var(--white);
+}
+a.tag-cancel:hover{
+    background-color: var(--orange-hover);
+}
+.tag-info{
+    background-color: var(--info);
+    color: #554000;
+}
+a.tag-info:hover{
+    background-color: var(--info-hover);
+}
+.tag-white{
+    background-color: var(--white);
+    color: var(--gray-10);
+}
+a.tag-white:hover{
+    background-color: var(--gray);
+}
+.tag-black{
+    background-color: var(--gray-15);
+    color: var(--white);
+}
+a.tag-black:hover{
+    background-color: var(--gray-25);
+}
+/* ------ Formularios ----- */
+.form-control{
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    height: calc(3rem + 1.5rem);
+    padding: .2rem 1.5rem;
+    border-radius: 0.3rem;
+    color: var(--gray-active);
+    background-color: var(--white);
+    border: 1px solid var(--gray-active);
+    transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+.form-control::-webkit-input-placeholder,
+.form-control::-moz-placeholder,
+.form-control:-ms-input-placeholder,
+.form-control::-ms-input-placeholder{
+    color: var(--gray-active);
+    opacity: 1;
+}
+.form-control::placeholder{
+    color: var(--gray-active);
+    opacity: 1;
+}
+.form-control:focus {
+    color: var(--gray-25);
+    background-color: #fff;
+    border-color: #89b6ff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 97, 255, 0.2);
+  }
+/* ------ Clases Mensajes ----- */
+.msn{
+    padding: .5rem 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: .5rem;
+    border: .1rem solid var(--gray-active);
+    color: var(--gray-active);
+}
+.msn hr{
+    width: 95%;
+    background-color: #000000;
+    opacity: .4;
+}
+.msn a{
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+}
+.msn a:hover{
+    text-decoration: underline;
+}
+.msn-plaz{
+    background-color: #E6E1FA;
+    border: 1px solid #B0A1E6;
+    color: var(--plaz-color);
+}
+.msn-primary{
+    background-color: #d8e7ff;
+    border: 1px solid #9dc2ff;
+    color: var(--primary);
+
+}
+.msn-ok{
+    background-color: #d8f1d7;
+    border: 1px solid #76cf70;
+    color: var(--green);
+}
+.msn-error{
+    background-color: #ffe0dd;
+    border: 1px solid #ffaba2;
+    color: var(--orange);
+}
+.msn-info{
+    background-color: #fff7de;
+    border: 1px solid var(--info);
+    color: #b78a00;
+}
+.msn-gray{
+    background-color: var(--white);
+    border: 1px solid var(--gray-85);
+    color: var(--gray-50);
+}
+.msn-dark{
+    background-color: var(--gray-90);
+    border: 1px solid var(--gray-75);
+    color: var(--gray-15);
+}
+/* ------ Clases Botones ----- */
+.btn{
+    display: inline-block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 1.45rem;
+    line-height: 1;
+    text-align: center;
+    margin: .5rem;
+    padding: 1.2rem 1.5rem;
+    letter-spacing: .1rem;
+    border-radius: .5rem;
+    border: none;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, border-color 0.15s ease-in-out;
+    background-color: transparent;
+    color: var(--white);
+}
+.btn-s{
+    font-weight: normal!important;
+    font-size: 1.2rem;
+    padding: .8rem 1rem;
+    border-radius: .4rem;
+}
+.btn-block{
+    display: block!important;
+}
+.btn-block-100{
+    margin: .5rem auto;
+    display: block!important;
+    width: 100%
+}
+.btn.disabled, .btn:disabled {
+    pointer-events: none;
+    background-color: var(--disabled-color);
+    color: var(--disabled-color-d);
+    border: .1rem solid var(--disabled-color-d);
+}
+/* ------ Btn Solid----- */
+.btn-plaz{
+    background-color: var(--relacionar);
+    border: .1rem solid var(--relacionar);
+}
+.btn-plaz:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--relacionar-hover);
+    border: .1rem solid var(--relacionar-hover);
+}
+.btn-plaz:active{
+    background-color: var(--relacionar-active);
+}
+.btn-primary{
+    background-color: var(--primary);
+    border: .1rem solid var(--primary);
+}
+.btn-primary:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--primary-hover);
+    border: .1rem solid var(--primary-hover);
+}
+.btn-primary:active{
+    background-color: var(--primary-active);
+}
+.btn-ok{
+    background-color: var(--green);
+    border: .1rem solid var(--green);
+}
+.btn-ok:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--green-hover);
+    border: .1rem solid var(--green-hover);
+}
+.btn-ok:active{
+    background-color: var(--green-active);
+}
+.btn-cancel{
+    background-color: var(--orange);
+    border: .1rem solid var(--orange);
+}
+.btn-cancel:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--orange-hover);
+    border: .1rem solid var(--orange-hover);
+}
+.btn-cancel:active{
+    background-color: var(--orange-active);
+}
+.btn-info{
+    background-color: var(--info);
+    color:#554000;
+    border: .1rem solid var(--info);
+}
+.btn-info:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--info-hover);
+    border: .1rem solid var(--info-hover);
+}
+.btn-info:active{
+    background-color: var(--info-active);
+}
+.btn-black{
+    background-color: var(--gray-15);
+    border: .1rem solid var(--gray-15);
+}
+.btn-black:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--gray-25);
+    border: .1rem solid var(--gray-25);
+}
+.btn-black:active{
+    background-color: var(--gray-10);
+}
+.btn-gray{
+    background-color: var(--gray);
+    color: #525288;
+    border: .1rem solid var(--gray);
+}
+.btn-gray:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--gray-hover);
+    border: .1rem solid var(--gray-hover);
+}
+.btn-gray:active{
+    background-color: var(--gray-active);
+}
+/* ------ Btn Line----- */
+.btn-plaz-l{
+    color: var(--plaz-color);
+    border: .1rem solid var(--relacionar);
+    font-weight: bold;
+}
+.btn-plaz-l:hover{
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--relacionar);
+}
+.btn-plaz-l:active{
+    background-color: var(--relacionar-active);
+}
+.btn-primary-l{
+    color: var(--primary);
+    border: .1rem solid var(--primary);
+    font-weight: bold;
+}
+.btn-primary-l:hover{
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--primary);
+}
+.btn-primary-l:active{
+    background-color: var(--primary-active);
+}
+.btn-ok-l{
+    color: var(--green);
+    border: .1rem solid var(--green);
+    font-weight: bold;
+}
+.btn-ok-l:hover{
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--green);
+}
+.btn-ok-l:active{
+    background-color: var(--green-active);
+}
+.btn-cancel-l{
+    color: var(--orange);
+    border: .1rem solid var(--orange);
+    font-weight: bold;
+}
+.btn-cancel-l:hover{
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+.btn-cancel-l:active{
+    background-color: var(--orange-active);
+}
+.btn-info-l{
+    color: var(--info);
+    border: .1rem solid var(--info);
+    font-weight: bold;
+}
+.btn-info-l:hover{
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--info);
+}
+.btn-info-l:active{
+    background-color: var(--info-active);
+}
+.btn-black-l{
+    color: var(--gray-15);
+    border: .1rem solid var(--gray-15);
+    font-weight: bold;
+}
+.btn-black-l:hover{
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--gray-15);
+}
+.btn-black-l:active{
+    background-color: var(--gray-10);
+}
+.btn-gray-l{
+    color: var(--white);
+    border: .1rem solid var(--white);
+    font-weight: bold;
+}
+.btn-gray-l:hover{
+    color: var(--gray-15);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--gray);
+}
+.btn-gray-l:active{
+    color: var(--gray-15);
+    background-color: var(--gray-10);
+}
+
+
+/* ---------------------- ^ CSS-Plaz ^ ----------------------- */
+/* =========================================================== */
